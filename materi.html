@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Informatika-Universitas Siliwangi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="stylee.css" />
+
+    <!-- Custom Calculator CSS -->
+
+    <!-- Your Favicon -->
+    <link rel="icon" href="img/LOGO-UNSIL-300x300.png" type="image/x-icon" />
+  </head>
+
+  <body id="navbar">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light shadow-sm">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="https://unsil.ac.id">
+        <img src="img/LOGO-UNSIL-300x300.png" alt="" width="35" height="35" class="d-inline-block align-text-top" />
+        PROJECT UAS KALKULUS
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-fill"></i> Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="materi.html"><i class="bi bi-book"></i> Materi mengenai logaritma</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="kalkulator2.html"><i class="bi bi-calculator"></i> Kalkulator logaritma</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="#" id="keluarLink"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+          </li>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // Ambil elemen link "Keluar" berdasarkan ID
+              var keluarLink = document.getElementById("keluarLink");
+
+              // Tambahkan event listener untuk menanggapi klik pada link "Keluar"
+              keluarLink.addEventListener("click", function (event) {
+                // menampilkan konfirmasi
+                var konfirmasi = confirm("Apakah Anda yakin ingin keluar?");
+
+                // Jika pengguna memilih "OK" maka arahkan ke halaman eksternal atau lakukan tindakan keluar yang sesuai
+                if (konfirmasi) {
+                  window.location.href = "https://google.com"; // perpindahan web
+                }
+                event.preventDefault();
+              });
+            });
+          </script>
+        </ul>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Calculator Section -->
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Materi Trigonometri</title>
+      </head>
+      <body>
+        <h2>Pengertian Logaritma</h2>
+        <ul>
+          <li>Logaritma adalah operasi matematika yang merupakan kebalikan dari perpangkatan. Secara sederhana, logaritma dapat didefinisikan sebagai berikut:</li>
+          <li>Logaritma dari bilangan b terhadap bilangan pokok a adalah bilangan x, jika a^x = b.</li>
+          <li>Misalnya, log2(8) = 3, karena 2^3 = 8. Maka, dapat dikatakan bahwa log2(8) adalah bilangan 3.</li>
+        </ul>
+        <h2>Bentuk Logaritma</h2>
+
+        <p>Logaritma dapat ditulis dalam dua bentuk, yaitu:</p>
+        <ul>
+          <li>Bentuk umum: log(a^x) = x</li>
+          <li>Bentuk singkat: log a = x</li>
+        </ul>
+
+        <p>Dalam bentuk umum, log(a^x) dibaca sebagai logaritma dari a dengan basis x. Sedangkan dalam bentuk singkat, log a dibaca sebagai logaritma dari a dengan basis 10.</p>
+        <h2>Nilai Logaritma</h2>
+        <p>
+          Nilai logaritma dari suatu bilangan b terhadap bilangan pokok a tergantung pada nilai a dan b. Jika a > 1, maka nilai logaritma dari b terhadap a akan positif. Jika 0 < a < 1, maka nilai logaritma dari b terhadap a akan negatif.
+        </p>
+        <h2>Sifat-Sifat Logaritma</h2>
+
+        <ul>
+          <li>Logaritma dari 1 adalah 0: log(1) = 0</li>
+          <li>Logaritma dari bilangan pokok a terhadap basis a adalah 1: log(a^1) = 1</li>
+          <li>Logaritma dari bilangan b terhadap basis a adalah sama dengan nilai eksponennya: log(a^x) = x</li>
+          <li>Logaritma dari bilangan b terhadap basis a dan basis b adalah sama: log(b)/log(a) = 1</li>
+          <li>Logaritma dari bilangan b terhadap basis a sama dengan logaritma dari bilangan c terhadap basis b jika b^x = c: log(b^x) = log(c)</li>
+          <li>Logaritma dari bilangan b terhadap basis a sama dengan jumlah logaritma dari bilangan b terhadap basis p dan basis q jika p^x = a dan q^x = b: log(b^x) = log(p^x) + log(q^x)</li>
+        </ul>
+
+        <h2>Rumus Logaritma</h2>
+        <p>Rumus logaritma dapat digunakan untuk menyelesaikan berbagai masalah matematika, seperti:</p>
+        <ul>
+          <li>Persamaan logaritma: Persamaan logaritma adalah persamaan yang memuat logaritma. Misalnya, log(x) = 2.</li>
+          <li>Pertidaksamaan logaritma: Pertidaksamaan logaritma adalah pertidaksamaan yang memuat logaritma. Misalnya, log(x) < 2.</li>
+          <li>Persamaan eksponen: Persamaan eksponen dapat diselesaikan dengan menggunakan logaritma. Misalnya, 2^x = 8.</li>
+        </ul>
+
+        <h2>Contoh Soal Logaritma</h2>
+
+        <h5>Soal:</h5>
+        <p>Tentukan nilai log(1000).</p>
+        <h5>Penyelesaian:</h5>
+        <p>Karena 10^3 = 1000, maka log(1000) = log(10^3) = 3 * log(10) = 3 * 1 = 3 Jadi, nilai log(1000) adalah **3**.</p>
+
+        <h5>Soal:</h5>
+        <p>Tentukan nilai log(1/256).</p>
+
+        <h5>Penyelesaian:</h5>
+        <p>Karena 2^-8 = 1/256, maka log(1/256) = log(2^-8) = -8 * log(2) = -8 * 0.3010299956639812 = -2.408239987251536 Jadi, nilai log(1/256) adalah **-2.408239987251536**.</p>
+        <h5>Soal:</h5>
+        <p>Tentukan nilai x, jika log2(x) = 3.</p>
+
+        <h5>Penyelesaian:</h5>
+
+        <p>Kita ubah persamaan log2(x) = 3 menjadi bentuk eksponen, yaitu: ``` 2^3 = x ``` Jadi, nilai x adalah **8**.</p>
+
+        <h5>Jawaban:</h5>
+
+        <p>Nilai x adalah **8**.</p>
+      </body>
+    </html>
+    <!-- akhir materi -->
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <p><a href="https://www.instagram.com/infactivty/">INFORMATIKA 2023</a></p>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

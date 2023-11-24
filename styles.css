@@ -1,0 +1,171 @@
+#gelombang {
+  padding-top: 1rem;
+  background-color: rgb(255, 251, 12);
+}
+#foto {
+  margin: 20;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+/* mode dekstop */
+
+.profile {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 30px;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* perubahan dri dekstop ke hp */
+
+@media screen and (max-width: 768px) {
+  .profile {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.7) 50%);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+/* ... (kode CSS sebelumnya) ... */
+
+.name {
+  position: absolute;
+  bottom: 40px; /* Sesuaikan sesuai kebutuhan Anda */
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.id {
+  position: absolute;
+  bottom: 20px; /* Sesuaikan sesuai kebutuhan Anda */
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.profile:hover .name {
+  opacity: 0;
+  transform: translateY(35px); /* Menyembunyikan nama ke bawah */
+}
+.profile:hover .id {
+  opacity: 0;
+  transform: translateY(20px); /* Menyembunyikan nama ke bawah */
+}
+
+/* ... (kode CSS setelahnya) ... */
+
+.profile:hover .overlay {
+  transform: scaleX(0);
+}
+
+.profile:hover .name {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#profile1 {
+  background-image: url("img/profil1.jpg");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#profile2 {
+  background-image: url("img/profil2.jpg");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#profile3 {
+  background-image: url("img/profil3.jpg");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query untuk perangkat dengan lebar layar <= 768px (misalnya, perangkat mobile) */
+@media screen and (max-width: 768px) {
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column; /* Menentukan arah flex menjadi kolom pada perangkat mobile */
+  }
+  #foto {
+    margin: 20;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    flex-direction: column; /* Menentukan arah flex menjadi kolom */
+  }
+
+  .profile {
+    width: 170px;
+    height: 170px;
+    margin: 10px 0; /* Menyesuaikan margin di perangkat mobile */
+  }
+
+  .name {
+    font-size: 10px; /* Mengurangi ukuran font pada perangkat mobile */
+    bottom: 20px; /* Menyesuaikan posisi pada perangkat mobile */
+  }
+  .id {
+    font-size: 10px; /* Mengurangi ukuran font pada perangkat mobile */
+    bottom: 10px; /* Menyesuaikan posisi pada perangkat mobile */
+  }
+
+  .profile:hover .name,
+  .profile:hover .id {
+    transform: translateY(15px); /* Menyesuaikan perubahan transform pada perangkat mobile */
+  }
+
+  /* Menyesuaikan margin pada perangkat mobile */
+  .carousel {
+    margin: 10px 0;
+  }
+}
